@@ -1,0 +1,42 @@
+.ready {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #f67e7e;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &::before {
+    content: url(../../images/restangle.svg);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__title {
+    color: #012f34;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+
+  &__btn {
+    button {
+      border-radius: 24px;
+      border: 2px solid #012f34;
+      color: #012f34;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      padding: 10px 30px;
+      background-color: #f67e7e;
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .ready {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}

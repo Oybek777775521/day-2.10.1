@@ -1,0 +1,111 @@
+.cards {
+  width: 100%;
+  padding-bottom: 200px;
+  background-color: #004047;
+  position: relative;
+  &::before {
+    content: url("../../images/directortop.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: url("../../images/directorbottom.svg");
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .title {
+      max-width: 750px;
+      margin: 0 auto;
+      padding-top: 100px;
+      color: #ffffff;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      // text-align: center;
+
+      &__color {
+        color: #79c8c7;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+
+    .box {
+      margin-top: 90px;
+      display: flex;
+      justify-content: space-between;
+
+      &__card {
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__desc {
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 25px;
+        margin-bottom: 20px;
+      }
+
+      &__title {
+        text-align: center;
+        color: #79c8c7;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+      }
+
+      &__info {
+        text-align: center;
+        color: #fff;
+        font-size: 13px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .cards {
+    .container {
+      .box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &__card {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 650px) {
+  .cards {
+    .container {
+      .box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &__card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
